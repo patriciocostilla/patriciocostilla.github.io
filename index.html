@@ -6,13 +6,24 @@
   <title>Juan Patricio Costilla | DevOps Engineer & Tech Lead</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root { color-scheme: dark; }
+    body {
+      background-color: #0b0710;
+      background-image:
+        radial-gradient(60rem 40rem at 15% -10%, rgba(139, 92, 246, 0.18), transparent 60%),
+        radial-gradient(50rem 35rem at 100% 0%, rgba(168, 85, 247, 0.12), transparent 55%);
+      background-attachment: fixed;
+    }
+    .kiro-glow { box-shadow: 0 0 0 1px rgba(139,92,246,0.25), 0 8px 30px -12px rgba(139,92,246,0.5); }
+  </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased selection:bg-blue-500 selection:text-white">
+<body class="text-violet-50 font-sans antialiased selection:bg-violet-500 selection:text-white">
 
   <!-- Header / Selector de Idioma -->
-  <header class="max-w-4xl mx-auto p-6 flex justify-between items-center border-b border-gray-800">
-    <span class="text-sm text-gray-400"><i class="fa-solid fa-location-dot mr-1"></i> Córdoba / Resistencia, AR</span>
-    <div class="flex items-center space-x-2 bg-gray-800 p-1 rounded-lg border border-gray-700">
+  <header class="max-w-4xl mx-auto p-6 flex justify-between items-center border-b border-violet-900/40">
+    <span class="text-sm text-violet-300/70"><i class="fa-solid fa-location-dot mr-1 text-violet-400"></i> Córdoba / Resistencia, AR</span>
+    <div class="flex items-center space-x-2 bg-violet-950/40 p-1 rounded-lg border border-violet-800/50 backdrop-blur">
       <button id="btn-es" onclick="setLanguage('es')" class="px-3 py-1 text-sm font-semibold rounded-md transition-all">ES</button>
       <button id="btn-en" onclick="setLanguage('en')" class="px-3 py-1 text-sm font-semibold rounded-md transition-all">EN</button>
     </div>
@@ -22,21 +33,21 @@
 
     <!-- Perfil Principal -->
     <section class="space-y-4">
-      <h1 class="text-4xl sm:text-5xl font-extrabold text-white">Juan Patricio Costilla</h1>
-      <h2 class="text-xl sm:text-2xl font-medium text-blue-400" data-i18n="role">DevOps Engineer & Technical Lead | AWS Certified Solutions Architect - Professional</h2>
-      <p class="text-gray-300 leading-relaxed max-w-3xl" data-i18n="bio">
+      <h1 class="text-4xl sm:text-5xl font-extrabold bg-gradient-to-r from-violet-300 via-fuchsia-200 to-violet-400 bg-clip-text text-transparent">Juan Patricio Costilla</h1>
+      <h2 class="text-xl sm:text-2xl font-medium text-violet-400" data-i18n="role">DevOps Engineer & Technical Lead | AWS Certified Solutions Architect - Professional</h2>
+      <p class="text-violet-100/80 leading-relaxed max-w-3xl" data-i18n="bio">
         Ingeniero en Sistemas de Información con amplia experiencia en arquitecturas Cloud, GitOps y automatización.
       </p>
       
       <!-- Links de Contacto -->
       <div class="flex flex-wrap gap-4 pt-2">
-        <a href="mailto:patriciocostilla@gmail.com" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg font-medium text-sm transition flex items-center gap-2">
+        <a href="mailto:patriciocostilla@gmail.com" class="bg-violet-600 hover:bg-violet-500 text-white px-4 py-2 rounded-lg font-medium text-sm transition flex items-center gap-2 kiro-glow">
           <i class="fa-solid fa-envelope"></i> Email
         </a>
-        <a href="https://www.linkedin.com/in/juan-patricio-costilla-6a8422b7" target="_blank" class="bg-gray-800 hover:bg-gray-700 text-gray-200 border border-gray-700 px-4 py-2 rounded-lg font-medium text-sm transition flex items-center gap-2">
+        <a href="https://www.linkedin.com/in/juan-patricio-costilla-6a8422b7" target="_blank" class="bg-violet-950/40 hover:bg-violet-900/50 text-violet-100 border border-violet-800/50 px-4 py-2 rounded-lg font-medium text-sm transition flex items-center gap-2">
           <i class="fa-brands fa-linkedin"></i> LinkedIn
         </a>
-        <a href="https://github.com/patriciocostilla" target="_blank" class="bg-gray-800 hover:bg-gray-700 text-gray-200 border border-gray-700 px-4 py-2 rounded-lg font-medium text-sm transition flex items-center gap-2">
+        <a href="https://github.com/patriciocostilla" target="_blank" class="bg-violet-950/40 hover:bg-violet-900/50 text-violet-100 border border-violet-800/50 px-4 py-2 rounded-lg font-medium text-sm transition flex items-center gap-2">
           <i class="fa-brands fa-github"></i> GitHub
         </a>
       </div>
@@ -44,15 +55,15 @@
 
     <!-- Experiencia Laboral Destacada -->
     <section class="space-y-6">
-      <h3 class="text-2xl font-bold border-b border-gray-800 pb-2 text-gray-200" data-i18n="title_experience">Experiencia Destacada</h3>
+      <h3 class="text-2xl font-bold border-b border-violet-900/40 pb-2 text-violet-200" data-i18n="title_experience">Experiencia Destacada</h3>
       
       <!-- Craftech -->
       <div class="space-y-2">
         <div class="flex flex-col sm:flex-row justify-between sm:items-center">
-          <h4 class="text-lg font-bold text-white">Craftech — <span class="text-blue-400 font-normal">DevOps Engineer & Technical Lead</span></h4>
-          <span class="text-sm text-gray-400" data-i18n="exp1_date">Ago 2023 – Presente</span>
+          <h4 class="text-lg font-bold text-white">Craftech — <span class="text-violet-400 font-normal">DevOps Engineer & Technical Lead</span></h4>
+          <span class="text-sm text-violet-300/60" data-i18n="exp1_date">Ago 2023 – Presente</span>
         </div>
-        <ul class="list-disc list-inside text-gray-300 space-y-1 text-sm pl-2">
+        <ul class="list-disc list-inside text-violet-100/75 space-y-1 text-sm pl-2">
           <li data-i18n="exp1_1">Liderazgo técnico e implementación de arquitecturas Cloud e IaC (Terragrunt, AWS).</li>
           <li data-i18n="exp1_2">Orquestación de Kubernetes (EKS, Karpenter, Auto Mode, KEDA) y flujos GitOps / CI/CD (ArgoCD, GitHub Actions).</li>
           <li data-i18n="exp1_3">Despliegue de stacks de observabilidad end-to-end (Prometheus, Grafana, Loki, Mimir, Tempo).</li>
@@ -62,10 +73,10 @@
       <!-- Santex -->
       <div class="space-y-2">
         <div class="flex flex-col sm:flex-row justify-between sm:items-center">
-          <h4 class="text-lg font-bold text-white">Santex AMERICA — <span class="text-blue-400 font-normal" data-i18n="exp2_role">Desarrollador Full Stack & Mobile</span></h4>
-          <span class="text-sm text-gray-400" data-i18n="exp2_date">Dic 2021 – Ago 2023</span>
+          <h4 class="text-lg font-bold text-white">Santex AMERICA — <span class="text-violet-400 font-normal" data-i18n="exp2_role">Desarrollador Full Stack & Mobile</span></h4>
+          <span class="text-sm text-violet-300/60" data-i18n="exp2_date">Dic 2021 – Ago 2023</span>
         </div>
-        <ul class="list-disc list-inside text-gray-300 space-y-1 text-sm pl-2">
+        <ul class="list-disc list-inside text-violet-100/75 space-y-1 text-sm pl-2">
           <li data-i18n="exp2_1">Desarrollo de aplicaciones web/móviles (Ionic, Angular, .NET Framework, SQL Server).</li>
           <li data-i18n="exp2_2">Integración de pipelines de CI/CD y gestión de infraestructura IT.</li>
         </ul>
@@ -74,40 +85,40 @@
 
     <!-- Experiencia Previa -->
     <section class="space-y-4">
-      <h3 class="text-xl font-bold border-b border-gray-800 pb-2 text-gray-200" data-i18n="title_previous_exp">Experiencia Previa</h3>
+      <h3 class="text-xl font-bold border-b border-violet-900/40 pb-2 text-violet-200" data-i18n="title_previous_exp">Experiencia Previa</h3>
       
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
         
         <!-- Rosario Software -->
-        <div class="bg-gray-800/50 p-3 rounded-lg border border-gray-800">
+        <div class="bg-violet-950/30 p-3 rounded-lg border border-violet-900/40 hover:border-violet-700/60 transition-colors">
           <div class="font-semibold text-white">Rosario Software</div>
-          <div class="text-blue-400 text-xs" data-i18n="exp3_role">Software Developer & IT Infrastructure</div>
-          <div class="text-gray-500 text-xs mt-1" data-i18n="exp3_date">Jul 2019 – Dic 2021</div>
-          <p class="text-gray-400 text-xs mt-2" data-i18n="exp3_desc">Desarrollo web en Python/Django, PostgreSQL y Docker.</p>
+          <div class="text-violet-400 text-xs" data-i18n="exp3_role">Software Developer & IT Infrastructure</div>
+          <div class="text-violet-300/50 text-xs mt-1" data-i18n="exp3_date">Jul 2019 – Dic 2021</div>
+          <p class="text-violet-100/60 text-xs mt-2" data-i18n="exp3_desc">Desarrollo web en Python/Django, PostgreSQL y Docker.</p>
         </div>
 
         <!-- UTN CInApTIC -->
-        <div class="bg-gray-800/50 p-3 rounded-lg border border-gray-800">
+        <div class="bg-violet-950/30 p-3 rounded-lg border border-violet-900/40 hover:border-violet-700/60 transition-colors">
           <div class="font-semibold text-white" data-i18n="exp4_company">UTN (CInApTIC)</div>
-          <div class="text-blue-400 text-xs" data-i18n="exp4_role">Becario de Investigación en IA</div>
-          <div class="text-gray-500 text-xs mt-1" data-i18n="exp4_date">Abr 2020 – Ago 2023</div>
-          <p class="text-gray-400 text-xs mt-2" data-i18n="exp4_desc">Investigación y algoritmos para análisis de información desestructurada.</p>
+          <div class="text-violet-400 text-xs" data-i18n="exp4_role">Becario de Investigación en IA</div>
+          <div class="text-violet-300/50 text-xs mt-1" data-i18n="exp4_date">Abr 2020 – Ago 2023</div>
+          <p class="text-violet-100/60 text-xs mt-2" data-i18n="exp4_desc">Investigación y algoritmos para análisis de información desestructurada.</p>
         </div>
 
         <!-- Casa de Gobierno -->
-        <div class="bg-gray-800/50 p-3 rounded-lg border border-gray-800">
+        <div class="bg-violet-950/30 p-3 rounded-lg border border-violet-900/40 hover:border-violet-700/60 transition-colors">
           <div class="font-semibold text-white" data-i18n="exp5_company">Casa de Gobierno (Chaco)</div>
-          <div class="text-blue-400 text-xs" data-i18n="exp5_role">Pasante - Dpto. de Innovación Técnica</div>
-          <div class="text-gray-500 text-xs mt-1" data-i18n="exp5_date">Dic 2017 – Nov 2018</div>
-          <p class="text-gray-400 text-xs mt-2" data-i18n="exp5_desc">Soporte e innovación en sistemas gubernamentales.</p>
+          <div class="text-violet-400 text-xs" data-i18n="exp5_role">Pasante - Dpto. de Innovación Técnica</div>
+          <div class="text-violet-300/50 text-xs mt-1" data-i18n="exp5_date">Dic 2017 – Nov 2018</div>
+          <p class="text-violet-100/60 text-xs mt-2" data-i18n="exp5_desc">Soporte e innovación en sistemas gubernamentales.</p>
         </div>
 
         <!-- Nuevo Banco del Chaco -->
-        <div class="bg-gray-800/50 p-3 rounded-lg border border-gray-800">
+        <div class="bg-violet-950/30 p-3 rounded-lg border border-violet-900/40 hover:border-violet-700/60 transition-colors">
           <div class="font-semibold text-white">Nuevo Banco del Chaco</div>
-          <div class="text-blue-400 text-xs" data-i18n="exp6_role">Pasante - Desarrollador RPG</div>
-          <div class="text-gray-500 text-xs mt-1" data-i18n="exp6_date">Sep 2017 – Dic 2017</div>
-          <p class="text-gray-400 text-xs mt-2" data-i18n="exp6_desc">Desarrollo y mantenimiento en entorno RPG.</p>
+          <div class="text-violet-400 text-xs" data-i18n="exp6_role">Pasante - Desarrollador RPG</div>
+          <div class="text-violet-300/50 text-xs mt-1" data-i18n="exp6_date">Sep 2017 – Dic 2017</div>
+          <p class="text-violet-100/60 text-xs mt-2" data-i18n="exp6_desc">Desarrollo y mantenimiento en entorno RPG.</p>
         </div>
 
       </div>
@@ -116,22 +127,22 @@
     <!-- Educación & Certificaciones -->
     <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div class="space-y-4">
-        <h3 class="text-xl font-bold border-b border-gray-800 pb-2 text-gray-200" data-i18n="title_education">Educación</h3>
+        <h3 class="text-xl font-bold border-b border-violet-900/40 pb-2 text-violet-200" data-i18n="title_education">Educación</h3>
         <ul class="space-y-3 text-sm">
           <li>
             <div class="font-semibold text-white" data-i18n="edu1_title">Maestría en Ciencia de Datos e IA</div>
-            <div class="text-gray-400" data-i18n="edu1_sub">Universidad Camilo José Cela (2021 - 2022) • Título en trámite</div>
+            <div class="text-violet-100/60" data-i18n="edu1_sub">Universidad Camilo José Cela (2021 - 2022) • Título en trámite</div>
           </li>
           <li>
             <div class="font-semibold text-white" data-i18n="edu2_title">Ingeniería en Sistemas de Información</div>
-            <div class="text-gray-400">Universidad Tecnológica Nacional (2014 - 2021)</div>
+            <div class="text-violet-100/60">Universidad Tecnológica Nacional (2014 - 2021)</div>
           </li>
         </ul>
       </div>
 
       <div class="space-y-4">
-        <h3 class="text-xl font-bold border-b border-gray-800 pb-2 text-gray-200" data-i18n="title_certifications">Certificaciones</h3>
-        <ul class="space-y-2 text-sm text-gray-300">
+        <h3 class="text-xl font-bold border-b border-violet-900/40 pb-2 text-violet-200" data-i18n="title_certifications">Certificaciones</h3>
+        <ul class="space-y-2 text-sm text-violet-100/75">
           <li>📜 <strong class="text-white">AWS Certified Solutions Architect</strong> – Professional</li>
           <li>📜 <strong class="text-white">AWS Certified Solutions Architect</strong> – Associate</li>
           <li>📜 <strong class="text-white">AWS Academy Cloud Foundations</strong></li>
@@ -141,22 +152,22 @@
 
     <!-- Stack Técnico -->
     <section class="space-y-4">
-      <h3 class="text-xl font-bold border-b border-gray-800 pb-2 text-gray-200" data-i18n="title_skills">Habilidades Técnicas</h3>
+      <h3 class="text-xl font-bold border-b border-violet-900/40 pb-2 text-violet-200" data-i18n="title_skills">Habilidades Técnicas</h3>
       <div class="flex flex-wrap gap-2 text-xs">
-        <span class="bg-blue-950 text-blue-300 border border-blue-800 px-3 py-1 rounded-full">AWS / EKS</span>
-        <span class="bg-blue-950 text-blue-300 border border-blue-800 px-3 py-1 rounded-full">Kubernetes</span>
-        <span class="bg-blue-950 text-blue-300 border border-blue-800 px-3 py-1 rounded-full">Terragrunt / Terraform</span>
-        <span class="bg-blue-950 text-blue-300 border border-blue-800 px-3 py-1 rounded-full">ArgoCD & GitOps</span>
-        <span class="bg-blue-950 text-blue-300 border border-blue-800 px-3 py-1 rounded-full">Prometheus & Grafana</span>
-        <span class="bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full">Python</span>
-        <span class="bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full">Node.js / React</span>
-        <span class="bg-gray-800 text-gray-300 border border-gray-700 px-3 py-1 rounded-full">Docker</span>
+        <span class="bg-violet-600/20 text-violet-200 border border-violet-500/40 px-3 py-1 rounded-full">AWS / EKS</span>
+        <span class="bg-violet-600/20 text-violet-200 border border-violet-500/40 px-3 py-1 rounded-full">Kubernetes</span>
+        <span class="bg-violet-600/20 text-violet-200 border border-violet-500/40 px-3 py-1 rounded-full">Terragrunt / Terraform</span>
+        <span class="bg-violet-600/20 text-violet-200 border border-violet-500/40 px-3 py-1 rounded-full">ArgoCD & GitOps</span>
+        <span class="bg-violet-600/20 text-violet-200 border border-violet-500/40 px-3 py-1 rounded-full">Prometheus & Grafana</span>
+        <span class="bg-violet-950/40 text-violet-100/80 border border-violet-800/50 px-3 py-1 rounded-full">Python</span>
+        <span class="bg-violet-950/40 text-violet-100/80 border border-violet-800/50 px-3 py-1 rounded-full">Node.js / React</span>
+        <span class="bg-violet-950/40 text-violet-100/80 border border-violet-800/50 px-3 py-1 rounded-full">Docker</span>
       </div>
     </section>
 
   </main>
 
-  <footer class="max-w-4xl mx-auto p-6 text-center text-xs text-gray-500 border-t border-gray-800 mt-12">
+  <footer class="max-w-4xl mx-auto p-6 text-center text-xs text-violet-300/50 border-t border-violet-900/40 mt-12">
     © <span id="year"></span> Juan Patricio Costilla. Hosted on GitHub Pages.
   </footer>
 

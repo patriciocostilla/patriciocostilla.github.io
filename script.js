@@ -84,11 +84,11 @@ function setLanguage(lang) {
   const btnEn = document.getElementById('btn-en');
   
   if (lang === 'es') {
-    btnEs.className = "px-3 py-1 text-sm font-semibold rounded-md bg-blue-600 text-white shadow";
-    btnEn.className = "px-3 py-1 text-sm font-semibold rounded-md text-gray-400 hover:text-white";
+    btnEs.className = "px-3 py-1 text-sm font-semibold rounded-md bg-violet-600 text-white shadow shadow-violet-900/50";
+    btnEn.className = "px-3 py-1 text-sm font-semibold rounded-md text-violet-300/60 hover:text-white";
   } else {
-    btnEn.className = "px-3 py-1 text-sm font-semibold rounded-md bg-blue-600 text-white shadow";
-    btnEs.className = "px-3 py-1 text-sm font-semibold rounded-md text-gray-400 hover:text-white";
+    btnEn.className = "px-3 py-1 text-sm font-semibold rounded-md bg-violet-600 text-white shadow shadow-violet-900/50";
+    btnEs.className = "px-3 py-1 text-sm font-semibold rounded-md text-violet-300/60 hover:text-white";
   }
 }
 

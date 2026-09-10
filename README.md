@@ -1,1 +1,0 @@
-# patriciocostilla.github.io
