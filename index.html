@@ -3,171 +3,235 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Juan Patricio Costilla | DevOps Engineer & Tech Lead</title>
+  <title>Juan Patricio Costilla | Ficha de Personaje</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=MedievalSharp&family=EB+Garamond:ital@0;1&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root { color-scheme: dark; }
+
     body {
-      background-color: #0b0710;
+      /* Pergamino oscuro con textura de tinta y desgaste */
+      background-color: #1c140b;
       background-image:
-        radial-gradient(60rem 40rem at 15% -10%, rgba(139, 92, 246, 0.18), transparent 60%),
-        radial-gradient(50rem 35rem at 100% 0%, rgba(168, 85, 247, 0.12), transparent 55%);
+        radial-gradient(50rem 40rem at 20% -10%, rgba(120, 53, 15, 0.35), transparent 60%),
+        radial-gradient(45rem 35rem at 100% 10%, rgba(69, 26, 3, 0.4), transparent 55%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
       background-attachment: fixed;
     }
-    .kiro-glow { box-shadow: 0 0 0 1px rgba(139,92,246,0.25), 0 8px 30px -12px rgba(139,92,246,0.5); }
+
+    .font-display { font-family: 'Cinzel', serif; }
+    .font-rune { font-family: 'MedievalSharp', cursive; }
+    .font-body { font-family: 'EB Garamond', serif; }
+    .font-prose { font-family: 'Inter', system-ui, sans-serif; }
+
+    /* Panel tipo pergamino */
+    .parchment {
+      background:
+        linear-gradient(rgba(28, 20, 11, 0.85), rgba(28, 20, 11, 0.85)),
+        radial-gradient(circle at 30% 20%, #2b2013, #1a120a 70%);
+      border: 1px solid rgba(180, 130, 60, 0.35);
+      box-shadow: inset 0 0 40px rgba(0,0,0,0.6), 0 6px 24px -12px rgba(0,0,0,0.8);
+    }
+
+    /* Encabezado de sección con filete dorado */
+    .rule-gold {
+      border-image: linear-gradient(to right, transparent, #c79a4b 20%, #f5d67f 50%, #c79a4b 80%, transparent) 1;
+      border-bottom-width: 2px;
+      border-bottom-style: solid;
+    }
+
+    .gold-text {
+      background: linear-gradient(to bottom, #f6e0a3, #c79a4b);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .stat-hex {
+      background: radial-gradient(circle at 50% 35%, #3a2a15, #1a120a);
+      border: 1px solid rgba(199, 154, 75, 0.5);
+    }
   </style>
 </head>
-<body class="text-violet-50 font-sans antialiased selection:bg-violet-500 selection:text-white">
+<body class="font-body text-amber-50/90 antialiased selection:bg-amber-500 selection:text-black">
 
   <!-- Header / Selector de Idioma -->
-  <header class="max-w-4xl mx-auto p-6 flex justify-between items-center border-b border-violet-900/40">
-    <span class="text-sm text-violet-300/70"><i class="fa-solid fa-location-dot mr-1 text-violet-400"></i> Córdoba / Resistencia, AR</span>
-    <div class="flex items-center space-x-2 bg-violet-950/40 p-1 rounded-lg border border-violet-800/50 backdrop-blur">
-      <button id="btn-es" onclick="setLanguage('es')" class="px-3 py-1 text-sm font-semibold rounded-md transition-all">ES</button>
-      <button id="btn-en" onclick="setLanguage('en')" class="px-3 py-1 text-sm font-semibold rounded-md transition-all">EN</button>
+  <header class="max-w-4xl mx-auto p-6 flex justify-between items-center">
+    <span class="text-sm text-amber-200/70 font-rune tracking-wide"><i class="fa-solid fa-dungeon mr-2 text-amber-400"></i> Córdoba / Resistencia, AR</span>
+    <div class="flex items-center space-x-2 parchment p-1 rounded-lg">
+      <button id="btn-es" onclick="setLanguage('es')" class="px-3 py-1 text-sm font-semibold rounded-md transition-all font-display">ES</button>
+      <button id="btn-en" onclick="setLanguage('en')" class="px-3 py-1 text-sm font-semibold rounded-md transition-all font-display">EN</button>
     </div>
   </header>
 
-  <main class="max-w-4xl mx-auto p-6 space-y-10">
+  <main class="max-w-4xl mx-auto p-6 space-y-8">
 
-    <!-- Perfil Principal -->
-    <section class="space-y-4">
-      <h1 class="text-4xl sm:text-5xl font-extrabold bg-gradient-to-r from-violet-300 via-fuchsia-200 to-violet-400 bg-clip-text text-transparent">Juan Patricio Costilla</h1>
-      <h2 class="text-xl sm:text-2xl font-medium text-violet-400" data-i18n="role">DevOps Engineer & Technical Lead | AWS Certified Solutions Architect - Professional</h2>
-      <p class="text-violet-100/80 leading-relaxed max-w-3xl" data-i18n="bio">
+    <!-- Ficha de Personaje -->
+    <section class="parchment rounded-2xl p-8 space-y-4 relative">
+      <div class="text-center">
+        <p class="font-rune text-amber-400/80 tracking-[0.3em] text-sm uppercase" data-i18n="sheet_label">— Hoja de Personaje —</p>
+        <h1 class="font-display text-4xl sm:text-6xl font-black gold-text mt-2 leading-tight">Juan Patricio Costilla</h1>
+        <div class="flex flex-wrap justify-center items-center gap-x-3 gap-y-1 mt-3 text-amber-200/80 font-display text-sm sm:text-base">
+          <span data-i18n="char_race">Humano</span>
+          <span class="text-amber-600">•</span>
+          <span data-i18n="char_class">Arquitecto de la Nube</span>
+        </div>
+      </div>
+
+      <h2 class="text-center text-lg sm:text-xl font-body text-amber-300 max-w-2xl mx-auto" data-i18n="role">DevOps Engineer & Technical Lead | AWS Certified Solutions Architect - Professional</h2>
+
+      <p class="font-body text-amber-50/90 leading-relaxed max-w-2xl mx-auto text-center text-base" data-i18n="bio">
         Ingeniero en Sistemas de Información con amplia experiencia en arquitecturas Cloud, GitOps y automatización.
       </p>
-      
-      <!-- Links de Contacto -->
-      <div class="flex flex-wrap gap-4 pt-2">
-        <a href="mailto:patriciocostilla@gmail.com" class="bg-violet-600 hover:bg-violet-500 text-white px-4 py-2 rounded-lg font-medium text-sm transition flex items-center gap-2 kiro-glow">
-          <i class="fa-solid fa-envelope"></i> Email
+
+      <!-- Vínculos / Pergaminos de contacto -->
+      <div class="flex flex-wrap justify-center gap-4 pt-2">
+        <a href="mailto:patriciocostilla@gmail.com" class="bg-amber-700 hover:bg-amber-600 text-amber-50 px-4 py-2 rounded-lg font-display font-semibold text-sm transition flex items-center gap-2 border border-amber-500/50 shadow-lg shadow-black/40">
+          <i class="fa-solid fa-scroll"></i> <span data-i18n="link_email">Enviar Cuervo</span>
         </a>
-        <a href="https://www.linkedin.com/in/juan-patricio-costilla-6a8422b7" target="_blank" class="bg-violet-950/40 hover:bg-violet-900/50 text-violet-100 border border-violet-800/50 px-4 py-2 rounded-lg font-medium text-sm transition flex items-center gap-2">
+        <a href="https://www.linkedin.com/in/juan-patricio-costilla-6a8422b7" target="_blank" class="parchment hover:border-amber-500/60 text-amber-100 px-4 py-2 rounded-lg font-display font-semibold text-sm transition flex items-center gap-2">
           <i class="fa-brands fa-linkedin"></i> LinkedIn
         </a>
-        <a href="https://github.com/patriciocostilla" target="_blank" class="bg-violet-950/40 hover:bg-violet-900/50 text-violet-100 border border-violet-800/50 px-4 py-2 rounded-lg font-medium text-sm transition flex items-center gap-2">
+        <a href="https://github.com/patriciocostilla" target="_blank" class="parchment hover:border-amber-500/60 text-amber-100 px-4 py-2 rounded-lg font-display font-semibold text-sm transition flex items-center gap-2">
           <i class="fa-brands fa-github"></i> GitHub
         </a>
       </div>
     </section>
 
-    <!-- Experiencia Laboral Destacada -->
-    <section class="space-y-6">
-      <h3 class="text-2xl font-bold border-b border-violet-900/40 pb-2 text-violet-200" data-i18n="title_experience">Experiencia Destacada</h3>
-      
+    <!-- Gestas Destacadas -->
+    <section class="parchment rounded-2xl p-6 sm:p-8 space-y-6">
+      <h3 class="font-display text-2xl font-bold rule-gold pb-2 text-amber-300 flex items-center gap-3">
+        <i class="fa-solid fa-dragon text-amber-500"></i>
+        <span data-i18n="title_experience">Gestas Destacadas</span>
+      </h3>
+
       <!-- Craftech -->
       <div class="space-y-2">
         <div class="flex flex-col sm:flex-row justify-between sm:items-center">
-          <h4 class="text-lg font-bold text-white">Craftech — <span class="text-violet-400 font-normal">DevOps Engineer & Technical Lead</span></h4>
-          <span class="text-sm text-violet-300/60" data-i18n="exp1_date">Ago 2023 – Presente</span>
+          <h4 class="text-lg font-display font-bold text-amber-100">Craftech — <span class="text-amber-400 font-normal">DevOps Engineer & Technical Lead</span></h4>
+          <span class="text-sm text-amber-200/60 font-rune" data-i18n="exp1_date">Ago 2023 – Presente</span>
         </div>
-        <ul class="list-disc list-inside text-violet-100/75 space-y-1 text-sm pl-2">
-          <li data-i18n="exp1_1">Liderazgo técnico e implementación de arquitecturas Cloud e IaC (Terragrunt, AWS).</li>
-          <li data-i18n="exp1_2">Orquestación de Kubernetes (EKS, Karpenter, Auto Mode, KEDA) y flujos GitOps / CI/CD (ArgoCD, GitHub Actions).</li>
-          <li data-i18n="exp1_3">Despliegue de stacks de observabilidad end-to-end (Prometheus, Grafana, Loki, Mimir, Tempo).</li>
+        <ul class="text-amber-50/80 space-y-1 text-base pl-2">
+          <li class="flex gap-2"><i class="fa-solid fa-khanda text-amber-600/70 mt-1.5 text-xs"></i><span data-i18n="exp1_1">Liderazgo técnico e implementación de arquitecturas Cloud e IaC (Terragrunt, AWS).</span></li>
+          <li class="flex gap-2"><i class="fa-solid fa-khanda text-amber-600/70 mt-1.5 text-xs"></i><span data-i18n="exp1_2">Orquestación de Kubernetes (EKS, Karpenter, Auto Mode, KEDA) y flujos GitOps / CI/CD (ArgoCD, GitHub Actions).</span></li>
+          <li class="flex gap-2"><i class="fa-solid fa-khanda text-amber-600/70 mt-1.5 text-xs"></i><span data-i18n="exp1_3">Despliegue de stacks de observabilidad end-to-end (Prometheus, Grafana, Loki, Mimir, Tempo).</span></li>
         </ul>
       </div>
 
       <!-- Santex -->
       <div class="space-y-2">
         <div class="flex flex-col sm:flex-row justify-between sm:items-center">
-          <h4 class="text-lg font-bold text-white">Santex AMERICA — <span class="text-violet-400 font-normal" data-i18n="exp2_role">Desarrollador Full Stack & Mobile</span></h4>
-          <span class="text-sm text-violet-300/60" data-i18n="exp2_date">Dic 2021 – Ago 2023</span>
+          <h4 class="text-lg font-display font-bold text-amber-100">Santex AMERICA — <span class="text-amber-400 font-normal" data-i18n="exp2_role">Desarrollador Full Stack & Mobile</span></h4>
+          <span class="text-sm text-amber-200/60 font-rune" data-i18n="exp2_date">Dic 2021 – Ago 2023</span>
         </div>
-        <ul class="list-disc list-inside text-violet-100/75 space-y-1 text-sm pl-2">
-          <li data-i18n="exp2_1">Desarrollo de aplicaciones web/móviles (Ionic, Angular, .NET Framework, SQL Server).</li>
-          <li data-i18n="exp2_2">Integración de pipelines de CI/CD y gestión de infraestructura IT.</li>
+        <ul class="text-amber-50/80 space-y-1 text-base pl-2">
+          <li class="flex gap-2"><i class="fa-solid fa-khanda text-amber-600/70 mt-1.5 text-xs"></i><span data-i18n="exp2_1">Desarrollo de aplicaciones web/móviles (Ionic, Angular, .NET Framework, SQL Server).</span></li>
+          <li class="flex gap-2"><i class="fa-solid fa-khanda text-amber-600/70 mt-1.5 text-xs"></i><span data-i18n="exp2_2">Integración de pipelines de CI/CD y gestión de infraestructura IT.</span></li>
         </ul>
       </div>
     </section>
 
-    <!-- Experiencia Previa -->
-    <section class="space-y-4">
-      <h3 class="text-xl font-bold border-b border-violet-900/40 pb-2 text-violet-200" data-i18n="title_previous_exp">Experiencia Previa</h3>
-      
+    <!-- Aventuras Previas -->
+    <section class="parchment rounded-2xl p-6 sm:p-8 space-y-4">
+      <h3 class="font-display text-xl font-bold rule-gold pb-2 text-amber-300 flex items-center gap-3">
+        <i class="fa-solid fa-map text-amber-500"></i>
+        <span data-i18n="title_previous_exp">Aventuras Previas</span>
+      </h3>
+
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-        
+
         <!-- Rosario Software -->
-        <div class="bg-violet-950/30 p-3 rounded-lg border border-violet-900/40 hover:border-violet-700/60 transition-colors">
-          <div class="font-semibold text-white">Rosario Software</div>
-          <div class="text-violet-400 text-xs" data-i18n="exp3_role">Software Developer & IT Infrastructure</div>
-          <div class="text-violet-300/50 text-xs mt-1" data-i18n="exp3_date">Jul 2019 – Dic 2021</div>
-          <p class="text-violet-100/60 text-xs mt-2" data-i18n="exp3_desc">Desarrollo web en Python/Django, PostgreSQL y Docker.</p>
+        <div class="bg-black/20 p-4 rounded-lg border border-amber-800/40 hover:border-amber-500/60 transition-colors">
+          <div class="font-display font-semibold text-amber-100">Rosario Software</div>
+          <div class="text-amber-400 text-xs font-rune" data-i18n="exp3_role">Software Developer & IT Infrastructure</div>
+          <div class="text-amber-200/50 text-xs mt-1 font-rune" data-i18n="exp3_date">Jul 2019 – Dic 2021</div>
+          <p class="text-amber-50/70 text-sm mt-2 italic" data-i18n="exp3_desc">Desarrollo web en Python/Django, PostgreSQL y Docker.</p>
         </div>
 
         <!-- UTN CInApTIC -->
-        <div class="bg-violet-950/30 p-3 rounded-lg border border-violet-900/40 hover:border-violet-700/60 transition-colors">
-          <div class="font-semibold text-white" data-i18n="exp4_company">UTN (CInApTIC)</div>
-          <div class="text-violet-400 text-xs" data-i18n="exp4_role">Becario de Investigación en IA</div>
-          <div class="text-violet-300/50 text-xs mt-1" data-i18n="exp4_date">Abr 2020 – Ago 2023</div>
-          <p class="text-violet-100/60 text-xs mt-2" data-i18n="exp4_desc">Investigación y algoritmos para análisis de información desestructurada.</p>
+        <div class="bg-black/20 p-4 rounded-lg border border-amber-800/40 hover:border-amber-500/60 transition-colors">
+          <div class="font-display font-semibold text-amber-100" data-i18n="exp4_company">UTN (CInApTIC)</div>
+          <div class="text-amber-400 text-xs font-rune" data-i18n="exp4_role">Becario de Investigación en IA</div>
+          <div class="text-amber-200/50 text-xs mt-1 font-rune" data-i18n="exp4_date">Abr 2020 – Ago 2023</div>
+          <p class="text-amber-50/70 text-sm mt-2 italic" data-i18n="exp4_desc">Investigación y algoritmos para análisis de información desestructurada.</p>
         </div>
 
         <!-- Casa de Gobierno -->
-        <div class="bg-violet-950/30 p-3 rounded-lg border border-violet-900/40 hover:border-violet-700/60 transition-colors">
-          <div class="font-semibold text-white" data-i18n="exp5_company">Casa de Gobierno (Chaco)</div>
-          <div class="text-violet-400 text-xs" data-i18n="exp5_role">Pasante - Dpto. de Innovación Técnica</div>
-          <div class="text-violet-300/50 text-xs mt-1" data-i18n="exp5_date">Dic 2017 – Nov 2018</div>
-          <p class="text-violet-100/60 text-xs mt-2" data-i18n="exp5_desc">Soporte e innovación en sistemas gubernamentales.</p>
+        <div class="bg-black/20 p-4 rounded-lg border border-amber-800/40 hover:border-amber-500/60 transition-colors">
+          <div class="font-display font-semibold text-amber-100" data-i18n="exp5_company">Casa de Gobierno (Chaco)</div>
+          <div class="text-amber-400 text-xs font-rune" data-i18n="exp5_role">Pasante - Dpto. de Innovación Técnica</div>
+          <div class="text-amber-200/50 text-xs mt-1 font-rune" data-i18n="exp5_date">Dic 2017 – Nov 2018</div>
+          <p class="text-amber-50/70 text-sm mt-2 italic" data-i18n="exp5_desc">Soporte e innovación en sistemas gubernamentales.</p>
         </div>
 
         <!-- Nuevo Banco del Chaco -->
-        <div class="bg-violet-950/30 p-3 rounded-lg border border-violet-900/40 hover:border-violet-700/60 transition-colors">
-          <div class="font-semibold text-white">Nuevo Banco del Chaco</div>
-          <div class="text-violet-400 text-xs" data-i18n="exp6_role">Pasante - Desarrollador RPG</div>
-          <div class="text-violet-300/50 text-xs mt-1" data-i18n="exp6_date">Sep 2017 – Dic 2017</div>
-          <p class="text-violet-100/60 text-xs mt-2" data-i18n="exp6_desc">Desarrollo y mantenimiento en entorno RPG.</p>
+        <div class="bg-black/20 p-4 rounded-lg border border-amber-800/40 hover:border-amber-500/60 transition-colors">
+          <div class="font-display font-semibold text-amber-100">Nuevo Banco del Chaco</div>
+          <div class="text-amber-400 text-xs font-rune" data-i18n="exp6_role">Pasante - Desarrollador RPG</div>
+          <div class="text-amber-200/50 text-xs mt-1 font-rune" data-i18n="exp6_date">Sep 2017 – Dic 2017</div>
+          <p class="text-amber-50/70 text-sm mt-2 italic" data-i18n="exp6_desc">Desarrollo y mantenimiento en entorno RPG.</p>
         </div>
 
       </div>
     </section>
 
-    <!-- Educación & Certificaciones -->
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div class="space-y-4">
-        <h3 class="text-xl font-bold border-b border-violet-900/40 pb-2 text-violet-200" data-i18n="title_education">Educación</h3>
-        <ul class="space-y-3 text-sm">
+    <!-- Formación & Órdenes -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="parchment rounded-2xl p-6 space-y-4">
+        <h3 class="font-display text-xl font-bold rule-gold pb-2 text-amber-300 flex items-center gap-3">
+          <i class="fa-solid fa-book-open text-amber-500"></i>
+          <span data-i18n="title_education">Grimorios y Estudios</span>
+        </h3>
+        <ul class="space-y-3 text-base">
           <li>
-            <div class="font-semibold text-white" data-i18n="edu1_title">Maestría en Ciencia de Datos e IA</div>
-            <div class="text-violet-100/60" data-i18n="edu1_sub">Universidad Camilo José Cela (2021 - 2022) • Título en trámite</div>
+            <div class="font-display font-semibold text-amber-100" data-i18n="edu1_title">Maestría en Ciencia de Datos e IA</div>
+            <div class="text-amber-50/60 italic" data-i18n="edu1_sub">Universidad Camilo José Cela (2021 - 2022) • Título en trámite</div>
           </li>
           <li>
-            <div class="font-semibold text-white" data-i18n="edu2_title">Ingeniería en Sistemas de Información</div>
-            <div class="text-violet-100/60">Universidad Tecnológica Nacional (2014 - 2021)</div>
+            <div class="font-display font-semibold text-amber-100" data-i18n="edu2_title">Ingeniería en Sistemas de Información</div>
+            <div class="text-amber-50/60 italic">Universidad Tecnológica Nacional (2014 - 2021)</div>
           </li>
         </ul>
       </div>
 
-      <div class="space-y-4">
-        <h3 class="text-xl font-bold border-b border-violet-900/40 pb-2 text-violet-200" data-i18n="title_certifications">Certificaciones</h3>
-        <ul class="space-y-2 text-sm text-violet-100/75">
-          <li>📜 <strong class="text-white">AWS Certified Solutions Architect</strong> – Professional</li>
-          <li>📜 <strong class="text-white">AWS Certified Solutions Architect</strong> – Associate</li>
-          <li>📜 <strong class="text-white">AWS Academy Cloud Foundations</strong></li>
+      <div class="parchment rounded-2xl p-6 space-y-4">
+        <h3 class="font-display text-xl font-bold rule-gold pb-2 text-amber-300 flex items-center gap-3">
+          <i class="fa-solid fa-medal text-amber-500"></i>
+          <span data-i18n="title_certifications">Insignias y Órdenes</span>
+        </h3>
+        <ul class="space-y-2 text-base text-amber-50/80">
+          <li><i class="fa-solid fa-shield-halved text-amber-500 mr-2"></i><strong class="text-amber-100 font-display">AWS Certified Solutions Architect</strong> – Professional</li>
+          <li><i class="fa-solid fa-shield-halved text-amber-500 mr-2"></i><strong class="text-amber-100 font-display">AWS Certified Solutions Architect</strong> – Associate</li>
+          <li><i class="fa-solid fa-shield-halved text-amber-500 mr-2"></i><strong class="text-amber-100 font-display">AWS Academy Cloud Foundations</strong></li>
         </ul>
       </div>
     </section>
 
-    <!-- Stack Técnico -->
-    <section class="space-y-4">
-      <h3 class="text-xl font-bold border-b border-violet-900/40 pb-2 text-violet-200" data-i18n="title_skills">Habilidades Técnicas</h3>
-      <div class="flex flex-wrap gap-2 text-xs">
-        <span class="bg-violet-600/20 text-violet-200 border border-violet-500/40 px-3 py-1 rounded-full">AWS / EKS</span>
-        <span class="bg-violet-600/20 text-violet-200 border border-violet-500/40 px-3 py-1 rounded-full">Kubernetes</span>
-        <span class="bg-violet-600/20 text-violet-200 border border-violet-500/40 px-3 py-1 rounded-full">Terragrunt / Terraform</span>
-        <span class="bg-violet-600/20 text-violet-200 border border-violet-500/40 px-3 py-1 rounded-full">ArgoCD & GitOps</span>
-        <span class="bg-violet-600/20 text-violet-200 border border-violet-500/40 px-3 py-1 rounded-full">Prometheus & Grafana</span>
-        <span class="bg-violet-950/40 text-violet-100/80 border border-violet-800/50 px-3 py-1 rounded-full">Python</span>
-        <span class="bg-violet-950/40 text-violet-100/80 border border-violet-800/50 px-3 py-1 rounded-full">Node.js / React</span>
-        <span class="bg-violet-950/40 text-violet-100/80 border border-violet-800/50 px-3 py-1 rounded-full">Docker</span>
+    <!-- Habilidades & Conjuros -->
+    <section class="parchment rounded-2xl p-6 sm:p-8 space-y-4">
+      <h3 class="font-display text-xl font-bold rule-gold pb-2 text-amber-300 flex items-center gap-3">
+        <i class="fa-solid fa-hat-wizard text-amber-500"></i>
+        <span data-i18n="title_skills">Habilidades y Conjuros</span>
+      </h3>
+      <div class="flex flex-wrap gap-2 text-sm">
+        <span class="stat-hex text-amber-200 px-3 py-1 rounded-full font-display">AWS / EKS</span>
+        <span class="stat-hex text-amber-200 px-3 py-1 rounded-full font-display">Kubernetes</span>
+        <span class="stat-hex text-amber-200 px-3 py-1 rounded-full font-display">Terragrunt / Terraform</span>
+        <span class="stat-hex text-amber-200 px-3 py-1 rounded-full font-display">ArgoCD & GitOps</span>
+        <span class="stat-hex text-amber-200 px-3 py-1 rounded-full font-display">Prometheus & Grafana</span>
+        <span class="bg-black/20 text-amber-100/80 border border-amber-800/40 px-3 py-1 rounded-full font-display">Python</span>
+        <span class="bg-black/20 text-amber-100/80 border border-amber-800/40 px-3 py-1 rounded-full font-display">Node.js / React</span>
+        <span class="bg-black/20 text-amber-100/80 border border-amber-800/40 px-3 py-1 rounded-full font-display">Docker</span>
       </div>
     </section>
 
   </main>
 
-  <footer class="max-w-4xl mx-auto p-6 text-center text-xs text-violet-300/50 border-t border-violet-900/40 mt-12">
+  <footer class="max-w-4xl mx-auto p-6 text-center text-xs text-amber-200/50 mt-8 font-rune tracking-wide">
+    <i class="fa-solid fa-dice-d20 text-amber-500 mr-1"></i>
     © <span id="year"></span> Juan Patricio Costilla. Hosted on GitHub Pages.
   </footer>
 
