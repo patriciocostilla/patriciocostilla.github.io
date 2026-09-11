@@ -60,7 +60,7 @@
 
   <!-- Header / Selector de Idioma -->
   <header class="max-w-4xl mx-auto p-6 flex justify-between items-center">
-    <span class="text-sm text-amber-200/70 font-rune tracking-wide"><i class="fa-solid fa-dungeon mr-2 text-amber-400"></i> Córdoba / Resistencia, AR</span>
+    <span class="text-sm text-amber-200/70 font-rune tracking-wide"><i class="fa-solid fa-dungeon mr-2 text-amber-400"></i><span data-i18n="location">Córdoba, Argentina</span></span>
     <div class="flex items-center space-x-2 parchment p-1 rounded-lg">
       <button id="btn-es" onclick="setLanguage('es')" class="px-3 py-1 text-sm font-semibold rounded-md transition-all font-display">ES</button>
       <button id="btn-en" onclick="setLanguage('en')" class="px-3 py-1 text-sm font-semibold rounded-md transition-all font-display">EN</button>
@@ -84,8 +84,15 @@
       <h2 class="text-center text-lg sm:text-xl font-body text-amber-300 max-w-2xl mx-auto" data-i18n="role">DevOps Engineer & Technical Lead | AWS Certified Solutions Architect - Professional</h2>
 
       <p class="font-body text-amber-50/90 leading-relaxed max-w-2xl mx-auto text-center text-base" data-i18n="bio">
-        Ingeniero en Sistemas de Información con amplia experiencia en arquitecturas Cloud, GitOps y automatización.
+        Ingeniero en Sistemas de Información, DevOps Engineer y Technical Lead. Especialista en Cloud e Infraestructura con sólida experiencia diseñando, automatizando y manteniendo arquitecturas Cloud. Con trayectoria previa como Desarrollador Full Stack e investigador en Inteligencia Artificial (CInApTIC - UTN), abordo la infraestructura uniendo ingeniería de software, observabilidad y automatización continua.
       </p>
+
+      <!-- Rasgo de Idiomas -->
+      <div class="flex flex-wrap items-center justify-center gap-2 text-xs sm:text-sm text-amber-200/80 py-1">
+        <i class="fa-solid fa-language text-amber-400"></i>
+        <span class="font-rune font-semibold" data-i18n="languages_label">Lenguas conocidas:</span>
+        <span class="font-prose text-amber-100" data-i18n="languages_val">Español (Nativo) • Inglés (Competencia Profesional)</span>
+      </div>
 
       <!-- Vínculos / Pergaminos de contacto -->
       <div class="flex flex-wrap justify-center gap-4 pt-2">
@@ -98,6 +105,159 @@
         <a href="https://github.com/patriciocostilla" target="_blank" class="parchment hover:border-amber-500/60 text-amber-100 px-4 py-2 rounded-lg font-display font-semibold text-sm transition flex items-center gap-2">
           <i class="fa-brands fa-github"></i> GitHub
         </a>
+      </div>
+    </section>
+
+    <!-- Habilidades & Conjuros -->
+    <section class="parchment rounded-2xl p-6 sm:p-8 space-y-6">
+      <h3 class="font-display text-2xl font-bold rule-gold pb-2 text-amber-300 flex items-center gap-3">
+        <i class="fa-solid fa-hat-wizard text-amber-500"></i>
+        <span data-i18n="title_skills">Habilidades y Conjuros</span>
+      </h3>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Cloud & Contenedores -->
+        <div class="space-y-2">
+          <h4 class="text-sm font-rune tracking-wider text-amber-300/90 uppercase flex items-center gap-2">
+            <i class="fa-solid fa-cloud text-amber-500 text-xs"></i>
+            <span data-i18n="skill_cat_cloud">Cloud & Contenedores</span>
+          </h4>
+          <div class="flex flex-wrap gap-1.5 text-xs">
+            <span class="stat-hex text-amber-200 px-2.5 py-1 rounded-md font-display">AWS</span>
+            <span class="stat-hex text-amber-200 px-2.5 py-1 rounded-md font-display">EKS (Auto Mode, Karpenter, KEDA)</span>
+            <span class="stat-hex text-amber-200 px-2.5 py-1 rounded-md font-display">Kubernetes</span>
+            <span class="bg-black/20 text-amber-100/80 border border-amber-800/40 px-2.5 py-1 rounded-md font-display">Docker</span>
+            <span class="bg-black/20 text-amber-100/80 border border-amber-800/40 px-2.5 py-1 rounded-md font-display">Helm</span>
+            <span class="bg-black/20 text-amber-100/80 border border-amber-800/40 px-2.5 py-1 rounded-md font-display">Kustomize</span>
+          </div>
+        </div>
+
+        <!-- IaC & GitOps -->
+        <div class="space-y-2">
+          <h4 class="text-sm font-rune tracking-wider text-amber-300/90 uppercase flex items-center gap-2">
+            <i class="fa-solid fa-code-branch text-amber-500 text-xs"></i>
+            <span data-i18n="skill_cat_iac">IaC & GitOps / CI-CD</span>
+          </h4>
+          <div class="flex flex-wrap gap-1.5 text-xs">
+            <span class="stat-hex text-amber-200 px-2.5 py-1 rounded-md font-display">Terragrunt</span>
+            <span class="stat-hex text-amber-200 px-2.5 py-1 rounded-md font-display">Terraform</span>
+            <span class="stat-hex text-amber-200 px-2.5 py-1 rounded-md font-display">ArgoCD</span>
+            <span class="bg-black/20 text-amber-100/80 border border-amber-800/40 px-2.5 py-1 rounded-md font-display">GitHub Actions</span>
+            <span class="bg-black/20 text-amber-100/80 border border-amber-800/40 px-2.5 py-1 rounded-md font-display">GitLab CI</span>
+            <span class="bg-black/20 text-amber-100/80 border border-amber-800/40 px-2.5 py-1 rounded-md font-display">Jenkins</span>
+            <span class="bg-black/20 text-amber-100/80 border border-amber-800/40 px-2.5 py-1 rounded-md font-display">Bitbucket Pipelines</span>
+          </div>
+        </div>
+
+        <!-- Observabilidad -->
+        <div class="space-y-2">
+          <h4 class="text-sm font-rune tracking-wider text-amber-300/90 uppercase flex items-center gap-2">
+            <i class="fa-solid fa-eye text-amber-500 text-xs"></i>
+            <span data-i18n="skill_cat_obs">Observabilidad</span>
+          </h4>
+          <div class="flex flex-wrap gap-1.5 text-xs">
+            <span class="stat-hex text-amber-200 px-2.5 py-1 rounded-md font-display">Prometheus</span>
+            <span class="stat-hex text-amber-200 px-2.5 py-1 rounded-md font-display">Grafana</span>
+            <span class="stat-hex text-amber-200 px-2.5 py-1 rounded-md font-display">Loki</span>
+            <span class="stat-hex text-amber-200 px-2.5 py-1 rounded-md font-display">Mimir</span>
+            <span class="stat-hex text-amber-200 px-2.5 py-1 rounded-md font-display">Tempo</span>
+          </div>
+        </div>
+
+        <!-- Programación & Mobile -->
+        <div class="space-y-2">
+          <h4 class="text-sm font-rune tracking-wider text-amber-300/90 uppercase flex items-center gap-2">
+            <i class="fa-solid fa-code text-amber-500 text-xs"></i>
+            <span data-i18n="skill_cat_dev">Programación & Mobile</span>
+          </h4>
+          <div class="flex flex-wrap gap-1.5 text-xs">
+            <span class="stat-hex text-amber-200 px-2.5 py-1 rounded-md font-display">Python (Django, DRF, Flask)</span>
+            <span class="stat-hex text-amber-200 px-2.5 py-1 rounded-md font-display">JavaScript / TypeScript</span>
+            <span class="bg-black/20 text-amber-100/80 border border-amber-800/40 px-2.5 py-1 rounded-md font-display">React.js</span>
+            <span class="bg-black/20 text-amber-100/80 border border-amber-800/40 px-2.5 py-1 rounded-md font-display">Node.js</span>
+            <span class="bg-black/20 text-amber-100/80 border border-amber-800/40 px-2.5 py-1 rounded-md font-display">Angular</span>
+            <span class="bg-black/20 text-amber-100/80 border border-amber-800/40 px-2.5 py-1 rounded-md font-display">Ionic (Mobile)</span>
+            <span class="bg-black/20 text-amber-100/80 border border-amber-800/40 px-2.5 py-1 rounded-md font-display">C# (.NET Framework)</span>
+            <span class="bg-black/20 text-amber-100/80 border border-amber-800/40 px-2.5 py-1 rounded-md font-display">Bash</span>
+          </div>
+        </div>
+
+        <!-- Data Science, IA & BI -->
+        <div class="space-y-2">
+          <h4 class="text-sm font-rune tracking-wider text-amber-300/90 uppercase flex items-center gap-2">
+            <i class="fa-solid fa-brain text-amber-500 text-xs"></i>
+            <span data-i18n="skill_cat_data">Ciencia de Datos, IA & BI</span>
+          </h4>
+          <div class="flex flex-wrap gap-1.5 text-xs">
+            <span class="stat-hex text-amber-200 px-2.5 py-1 rounded-md font-display">Python (NumPy, Pandas, Matplotlib, NetworkX)</span>
+            <span class="stat-hex text-amber-200 px-2.5 py-1 rounded-md font-display">PySpark</span>
+            <span class="stat-hex text-amber-200 px-2.5 py-1 rounded-md font-display">Keras & SKLearn</span>
+            <span class="bg-black/20 text-amber-100/80 border border-amber-800/40 px-2.5 py-1 rounded-md font-display">Airflow</span>
+            <span class="bg-black/20 text-amber-100/80 border border-amber-800/40 px-2.5 py-1 rounded-md font-display">R</span>
+            <span class="bg-black/20 text-amber-100/80 border border-amber-800/40 px-2.5 py-1 rounded-md font-display">Power BI</span>
+            <span class="bg-black/20 text-amber-100/80 border border-amber-800/40 px-2.5 py-1 rounded-md font-display">Tableau</span>
+          </div>
+        </div>
+
+        <!-- Bases de Datos -->
+        <div class="space-y-2">
+          <h4 class="text-sm font-rune tracking-wider text-amber-300/90 uppercase flex items-center gap-2">
+            <i class="fa-solid fa-database text-amber-500 text-xs"></i>
+            <span data-i18n="skill_cat_db">Bases de Datos</span>
+          </h4>
+          <div class="flex flex-wrap gap-1.5 text-xs">
+            <span class="stat-hex text-amber-200 px-2.5 py-1 rounded-md font-display">PostgreSQL</span>
+            <span class="stat-hex text-amber-200 px-2.5 py-1 rounded-md font-display">MySQL</span>
+            <span class="stat-hex text-amber-200 px-2.5 py-1 rounded-md font-display">SQL Server</span>
+            <span class="bg-black/20 text-amber-100/80 border border-amber-800/40 px-2.5 py-1 rounded-md font-display">MongoDB</span>
+            <span class="bg-black/20 text-amber-100/80 border border-amber-800/40 px-2.5 py-1 rounded-md font-display">Cassandra</span>
+            <span class="bg-black/20 text-amber-100/80 border border-amber-800/40 px-2.5 py-1 rounded-md font-display">Redis</span>
+          </div>
+        </div>
+
+        <!-- Infraestructura & IT -->
+        <div class="space-y-2 md:col-span-2">
+          <h4 class="text-sm font-rune tracking-wider text-amber-300/90 uppercase flex items-center gap-2">
+            <i class="fa-solid fa-server text-amber-500 text-xs"></i>
+            <span data-i18n="skill_cat_infra">Infraestructura, Redes & Seguridad</span>
+          </h4>
+          <div class="flex flex-wrap gap-1.5 text-xs">
+            <span class="stat-hex text-amber-200 px-2.5 py-1 rounded-md font-display" data-i18n="skill_server_admin">Administración de Servidores</span>
+            <span class="stat-hex text-amber-200 px-2.5 py-1 rounded-md font-display">Git</span>
+            <span class="stat-hex text-amber-200 px-2.5 py-1 rounded-md font-display" data-i18n="skill_net_sec">Redes y Seguridad</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Insignias y Órdenes -->
+    <section class="parchment rounded-2xl p-6 sm:p-8 space-y-4">
+      <h3 class="font-display text-xl font-bold rule-gold pb-2 text-amber-300 flex items-center gap-3">
+        <i class="fa-solid fa-medal text-amber-500"></i>
+        <span data-i18n="title_certifications">Insignias y Órdenes</span>
+      </h3>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+        <div class="bg-black/20 p-4 rounded-lg border border-amber-800/40 hover:border-amber-500/50 transition-colors flex items-center gap-3">
+          <i class="fa-solid fa-shield-halved text-amber-500 text-xl flex-shrink-0"></i>
+          <div>
+            <strong class="text-amber-100 font-display block">AWS Certified Solutions Architect</strong>
+            <span class="text-amber-200/70 text-xs font-rune">Professional</span>
+          </div>
+        </div>
+        <div class="bg-black/20 p-4 rounded-lg border border-amber-800/40 hover:border-amber-500/50 transition-colors flex items-center gap-3">
+          <i class="fa-solid fa-shield-halved text-amber-500 text-xl flex-shrink-0"></i>
+          <div>
+            <strong class="text-amber-100 font-display block">AWS Certified Solutions Architect</strong>
+            <span class="text-amber-200/70 text-xs font-rune">Associate</span>
+          </div>
+        </div>
+        <div class="bg-black/20 p-4 rounded-lg border border-amber-800/40 hover:border-amber-500/50 transition-colors flex items-center gap-3">
+          <i class="fa-solid fa-shield-halved text-amber-500 text-xl flex-shrink-0"></i>
+          <div>
+            <strong class="text-amber-100 font-display block">AWS Academy Cloud Foundations</strong>
+            <span class="text-amber-200/70 text-xs font-rune">Amazon Web Services</span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -115,9 +275,9 @@
           <span class="text-sm text-amber-200/60 font-rune" data-i18n="exp1_date">Ago 2023 – Presente</span>
         </div>
         <ul class="text-amber-50/80 space-y-1 text-base pl-2">
-          <li class="flex gap-2"><i class="fa-solid fa-khanda text-amber-600/70 mt-1.5 text-xs"></i><span data-i18n="exp1_1">Liderazgo técnico e implementación de arquitecturas Cloud e IaC (Terragrunt, AWS).</span></li>
-          <li class="flex gap-2"><i class="fa-solid fa-khanda text-amber-600/70 mt-1.5 text-xs"></i><span data-i18n="exp1_2">Orquestación de Kubernetes (EKS, Karpenter, Auto Mode, KEDA) y flujos GitOps / CI/CD (ArgoCD, GitHub Actions).</span></li>
-          <li class="flex gap-2"><i class="fa-solid fa-khanda text-amber-600/70 mt-1.5 text-xs"></i><span data-i18n="exp1_3">Despliegue de stacks de observabilidad end-to-end (Prometheus, Grafana, Loki, Mimir, Tempo).</span></li>
+          <li class="flex gap-2"><i class="fa-solid fa-khanda text-amber-600/70 mt-1.5 text-xs"></i><span data-i18n="exp1_1">Liderazgo técnico e implementación de arquitecturas Cloud escalables e infraestructura como código (IaC).</span></li>
+          <li class="flex gap-2"><i class="fa-solid fa-khanda text-amber-600/70 mt-1.5 text-xs"></i><span data-i18n="exp1_2">Gestión y orquestación de clústeres de Kubernetes en AWS (EKS, Karpenter, Auto Mode, KEDA) y flujos GitOps / CI-CD (ArgoCD, GitHub Actions).</span></li>
+          <li class="flex gap-2"><i class="fa-solid fa-khanda text-amber-600/70 mt-1.5 text-xs"></i><span data-i18n="exp1_3">Configuración y despliegue de stack completo de observabilidad (Prometheus, Grafana, Loki, Mimir, Tempo).</span></li>
         </ul>
       </div>
 
@@ -146,9 +306,9 @@
         <!-- Rosario Software -->
         <div class="bg-black/20 p-4 rounded-lg border border-amber-800/40 hover:border-amber-500/60 transition-colors">
           <div class="font-display font-semibold text-amber-100">Rosario Software</div>
-          <div class="text-amber-400 text-xs font-rune" data-i18n="exp3_role">Software Developer & IT Infrastructure</div>
+          <div class="text-amber-400 text-xs font-rune" data-i18n="exp3_role">Software Developer & IT Infrastructure Management</div>
           <div class="text-amber-200/50 text-xs mt-1 font-rune" data-i18n="exp3_date">Jul 2019 – Dic 2021</div>
-          <p class="text-amber-50/70 text-sm mt-2 italic" data-i18n="exp3_desc">Desarrollo web en Python/Django, PostgreSQL y Docker.</p>
+          <p class="text-amber-50/70 text-sm mt-2 italic" data-i18n="exp3_desc">Diseño, desarrollo y despliegue de software web (Python, Django, DRF, PostgreSQL, Docker). Administración de servidores virtualizados en la nube.</p>
         </div>
 
         <!-- UTN CInApTIC -->
@@ -156,7 +316,7 @@
           <div class="font-display font-semibold text-amber-100" data-i18n="exp4_company">UTN (CInApTIC)</div>
           <div class="text-amber-400 text-xs font-rune" data-i18n="exp4_role">Becario de Investigación en IA</div>
           <div class="text-amber-200/50 text-xs mt-1 font-rune" data-i18n="exp4_date">Abr 2020 – Ago 2023</div>
-          <p class="text-amber-50/70 text-sm mt-2 italic" data-i18n="exp4_desc">Investigación y algoritmos para análisis de información desestructurada.</p>
+          <p class="text-amber-50/70 text-sm mt-2 italic" data-i18n="exp4_desc">Diseño de algoritmos inteligentes para análisis de información desestructurada.</p>
         </div>
 
         <!-- Casa de Gobierno -->
@@ -178,7 +338,7 @@
       </div>
     </section>
 
-    <!-- Formación & Órdenes -->
+    <!-- Grimorios, Estudios y Formación Continua -->
     <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <div class="parchment rounded-2xl p-6 space-y-4">
         <h3 class="font-display text-xl font-bold rule-gold pb-2 text-amber-300 flex items-center gap-3">
@@ -187,44 +347,39 @@
         </h3>
         <ul class="space-y-3 text-base">
           <li>
-            <div class="font-display font-semibold text-amber-100" data-i18n="edu1_title">Maestría en Ciencia de Datos e IA</div>
-            <div class="text-amber-50/60 italic" data-i18n="edu1_sub">Universidad Camilo José Cela (2021 - 2022) • Título en trámite</div>
+            <div class="font-display font-semibold text-amber-100" data-i18n="edu1_title">Maestría en Ciencia de Datos e Inteligencia Artificial</div>
+            <div class="text-amber-50/60 italic text-sm" data-i18n="edu1_sub">Universidad Camilo José Cela (Oct 2021 – Sep 2022) • Título en trámite</div>
           </li>
           <li>
             <div class="font-display font-semibold text-amber-100" data-i18n="edu2_title">Ingeniería en Sistemas de Información</div>
-            <div class="text-amber-50/60 italic">Universidad Tecnológica Nacional (2014 - 2021)</div>
+            <div class="text-amber-50/60 italic text-sm" data-i18n="edu2_sub">Universidad Tecnológica Nacional - FRRe (Mar 2014 – Mar 2021)</div>
           </li>
         </ul>
       </div>
 
       <div class="parchment rounded-2xl p-6 space-y-4">
         <h3 class="font-display text-xl font-bold rule-gold pb-2 text-amber-300 flex items-center gap-3">
-          <i class="fa-solid fa-medal text-amber-500"></i>
-          <span data-i18n="title_certifications">Insignias y Órdenes</span>
+          <i class="fa-solid fa-graduation-cap text-amber-500"></i>
+          <span data-i18n="title_courses">Pergaminos de Formación Continua</span>
         </h3>
-        <ul class="space-y-2 text-base text-amber-50/80">
-          <li><i class="fa-solid fa-shield-halved text-amber-500 mr-2"></i><strong class="text-amber-100 font-display">AWS Certified Solutions Architect</strong> – Professional</li>
-          <li><i class="fa-solid fa-shield-halved text-amber-500 mr-2"></i><strong class="text-amber-100 font-display">AWS Certified Solutions Architect</strong> – Associate</li>
-          <li><i class="fa-solid fa-shield-halved text-amber-500 mr-2"></i><strong class="text-amber-100 font-display">AWS Academy Cloud Foundations</strong></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Habilidades & Conjuros -->
-    <section class="parchment rounded-2xl p-6 sm:p-8 space-y-4">
-      <h3 class="font-display text-xl font-bold rule-gold pb-2 text-amber-300 flex items-center gap-3">
-        <i class="fa-solid fa-hat-wizard text-amber-500"></i>
-        <span data-i18n="title_skills">Habilidades y Conjuros</span>
-      </h3>
-      <div class="flex flex-wrap gap-2 text-sm">
-        <span class="stat-hex text-amber-200 px-3 py-1 rounded-full font-display">AWS / EKS</span>
-        <span class="stat-hex text-amber-200 px-3 py-1 rounded-full font-display">Kubernetes</span>
-        <span class="stat-hex text-amber-200 px-3 py-1 rounded-full font-display">Terragrunt / Terraform</span>
-        <span class="stat-hex text-amber-200 px-3 py-1 rounded-full font-display">ArgoCD & GitOps</span>
-        <span class="stat-hex text-amber-200 px-3 py-1 rounded-full font-display">Prometheus & Grafana</span>
-        <span class="bg-black/20 text-amber-100/80 border border-amber-800/40 px-3 py-1 rounded-full font-display">Python</span>
-        <span class="bg-black/20 text-amber-100/80 border border-amber-800/40 px-3 py-1 rounded-full font-display">Node.js / React</span>
-        <span class="bg-black/20 text-amber-100/80 border border-amber-800/40 px-3 py-1 rounded-full font-display">Docker</span>
+        <div class="space-y-2.5 text-sm">
+          <div class="bg-black/20 p-2.5 rounded-lg border border-amber-800/40 hover:border-amber-500/50 transition-colors">
+            <div class="font-display font-semibold text-amber-100 text-xs sm:text-sm" data-i18n="course1_title">Web Application Technologies and Django</div>
+            <div class="text-amber-200/60 text-xs font-rune" data-i18n="course1_sub">University of Michigan (Ago 2021)</div>
+          </div>
+          <div class="bg-black/20 p-2.5 rounded-lg border border-amber-800/40 hover:border-amber-500/50 transition-colors">
+            <div class="font-display font-semibold text-amber-100 text-xs sm:text-sm" data-i18n="course2_title">IBM Cybersecurity Academic Week</div>
+            <div class="text-amber-200/60 text-xs font-rune" data-i18n="course2_sub">Global University Programs (Sep 2021)</div>
+          </div>
+          <div class="bg-black/20 p-2.5 rounded-lg border border-amber-800/40 hover:border-amber-500/50 transition-colors">
+            <div class="font-display font-semibold text-amber-100 text-xs sm:text-sm" data-i18n="course3_title">English for STEM</div>
+            <div class="text-amber-200/60 text-xs font-rune" data-i18n="course3_sub">Coursera (May 2020)</div>
+          </div>
+          <div class="bg-black/20 p-2.5 rounded-lg border border-amber-800/40 hover:border-amber-500/50 transition-colors">
+            <div class="font-display font-semibold text-amber-100 text-xs sm:text-sm" data-i18n="course4_title">Front-End Web UI Frameworks and Tools: Bootstrap 4</div>
+            <div class="text-amber-200/60 text-xs font-rune" data-i18n="course4_sub">Coursera / Formación Especializada</div>
+          </div>
+        </div>
       </div>
     </section>
 
